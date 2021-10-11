@@ -7,6 +7,24 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/shareTxt"
+        android:layout_width="11dp"
+        android:layout_height="20dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/shareImgBtn"
+        app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+    <TextView
+        android:id="@+id/commentTxt"
+        android:layout_width="11dp"
+        android:layout_height="20dp"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/shareImgBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/commentImgBtn"
+        app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+    <TextView
         android:id="@+id/datetxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -17,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/authortxt"
+        android:id="@+id/authorxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -27,12 +45,13 @@
 
     <TextView
         android:id="@+id/txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="374dp"
+        android:layout_height="18dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authortxt" />
+        app:layout_constraintTop_toBottomOf="@+id/authorxt" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -52,7 +71,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_favorite_24"
+        android:src="@drawable/ic_baseline_favorite_disabled"
         app:layout_constraintEnd_toStartOf="@+id/commentImgBtn"
         app:layout_constraintTop_toBottomOf="@+id/txt" />
 
@@ -63,7 +82,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_comment_24"
+        android:src="@drawable/ic_baseline_comment_disabled"
         app:layout_constraintEnd_toStartOf="@+id/shareImgBtn"
         app:layout_constraintTop_toBottomOf="@+id/txt" />
 
@@ -74,8 +93,18 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_share_24"
+        android:src="@drawable/ic_baseline_share_disabled"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+    <TextView
+        android:id="@+id/likeTxt"
+        android:layout_width="11dp"
+        android:layout_height="20dp"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/commentImgBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/likeImgBtn"
         app:layout_constraintTop_toBottomOf="@+id/txt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
