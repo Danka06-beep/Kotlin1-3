@@ -2,13 +2,14 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val post = Post(1,"Dan",453878,"la la la", like = true, comment = false, share = true,3,0,1 )
+        val post = Post(1,"Dan",1634045445261,"la la la", like = true, comment = false, share = true,3,0,1 )
         inthat(post)
     }
     private fun isTrue(post : Post) {
@@ -43,8 +44,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun date(post: Post): String {
-        val publishedAgo =  post.data / 1000
+     fun date(post: Post): String {
+        val publishedAgo =  (System.currentTimeMillis() - post.data) / 1000
         val toMin = if (publishedAgo > 3599) {
             publishedAgo / 3600
         } else {
